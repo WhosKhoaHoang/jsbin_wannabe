@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>CodePlayer</title>
+        
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script> <!--jQuery from a CDN-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="code_player.css">
+    </head>
+    
+    <body>
+            
+        <div id="menu_bar">
+            <h3 id="title">CodePlayer</h3>
+            
+            <div id="choices">
+                <!--Say autocomplete="off" so that checked boxes aren't memorized on refreshes-->
+                <input type="checkbox" id="html_button" autocomplete="off"><label for="html_button" class="button_label">HTML</label>
+                <input type="checkbox" id="css_button" autocomplete="off"><label for="css_button" class="button_label">CSS</label>
+                <input type="checkbox" id="js_button" autocomplete="off"><label for="js_button" class="button_label">JavaScript</label>
+                <input type="checkbox" id="output_button" autocomplete="off"><label for="output_button" class="button_label">Output</label>
+            </div>
+        </div>
+        
+        <!--Should have put this chunk in a div-->
+        <textarea id="html_area" class="panels"><p id="paragraph">Hello World!</p></textarea>        
+        <textarea id="css_area" class="panels">p { color: green; }</textarea>
+        <textarea id="js_area" class="panels">document.getElementById("paragraph").innerHTML = "Hello Khoa!";</textarea>
+        <iframe id="output_area" class="panels"></iframe>
+
+        <script type="text/javascript" src="code_player.js"></script>
+    </body>
+
+</html>
